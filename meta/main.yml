@@ -1,0 +1,18 @@
+---
+galaxy_info:
+  author: Andrew Rothstein
+  description: apt-cacher-ng role
+  company: BlackRock
+  license:
+    - MIT
+  min_ansible_version: 1.2
+  platforms:
+    - name: Ubuntu
+      versions:
+        - trusty
+
+  categories:
+    - development
+
+dependencies: []
+  

@@ -13,11 +13,11 @@
 
 # Storage directory for downloaded data and related maintenance activity.
 #
-CacheDir: /var/cache/apt-cacher-ng
+CacheDir: {{apt_cacher_ng_cachedir}}
 
 # Log file directory, can be set empty to disable logging
 #
-LogDir: /var/log/apt-cacher-ng
+LogDir: {{apt_cacher_ng_logdir}}
 
 # A place to look for additional configuration and resource files if they are not
 # found in the configuration directory
@@ -27,7 +27,7 @@ LogDir: /var/log/apt-cacher-ng
 # TCP server port for incoming http (or HTTP proxy) connections.
 # Can be set to 9999 to emulate apt-proxy.
 #
-Port:3142
+Port:{{apt_cacher_ng_port}}
 
 # Addresses or hostnames to listen on. Multiple addresses must be separated by
 # spaces. Each entry must be an exact local address which is associated with a
@@ -96,7 +96,7 @@ ReportPage: acng-report.html
 
 # Don't detach from the starting console.
 #
-# ForeGround: 0
+ForeGround: 1
 
 # Store the pid of the daemon process in the specified text file.
 # Default: disabled

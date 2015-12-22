@@ -1,0 +1,4 @@
+---
+apt_cacher_ng_port : 3124
+apt_cacher_ng_cachedir : '/var/cache/apt-cacher-ng'
+apt_cacher_ng_logdir : '/var/log/apt-cacher-ng'
