@@ -45,10 +45,11 @@ Port:{{apt_cacher_ng_port}}
 #
 # Default: uses direct connection
 #
-{% if proxy_env.http_proxy is defined %}
+{% if proxy_env is defined and proxy_env.http_proxy is defined %}
 Proxy: {{ proxy_env.http_proxy }}
-{% endif %}
+{% else %}
 # Proxy: https://username:proxypassword@proxy.example.net:3129
+{% endif %}
 
 # Repository remapping. See manual for details.
 # In this example, some backends files might be generated during package
