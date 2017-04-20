@@ -1,7 +1,8 @@
-Role Name
+[![CircleCI](https://circleci.com/gh/andrewrothstein/ansible-apt-cacher-ng.svg?style=svg)](https://circleci.com/gh/andrewrothstein/ansible-apt-cacher-ng)
+andrewrothstein.apt-cacher-ng
 =========
 
-Installs an apt-cacher-ng service.
+Installs [apt-cacher-ng](https://www.unix-ag.uni-kl.de/~bloch/acng/)
 
 Role Variables
 --------------
@@ -11,12 +12,11 @@ See the [defaults](defaults/main.yml)
 Example Playbook
 ----------------
 
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
-
-    - hosts: apt-cache-ng-servers
-      roles:
-         - role: andrewrothstein.apt-cacher-ng
-	   apt_cache_ng_port: 8080
+```yml
+- hosts: apt-cache-ng-servers
+  roles:
+    - andrewrothstein.apt-cacher-ng
+```
 
 License
 -------
@@ -26,4 +26,4 @@ MIT
 Author Information
 ------------------
 
-Andrew Rothstein andrew.rothstein@gmail.com
+Andrew Rothstein <andrew.rothstein@gmail.com>

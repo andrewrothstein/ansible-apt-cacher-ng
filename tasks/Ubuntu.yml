@@ -1,36 +1,22 @@
 ---
-- name: (Ubuntu) installing apt-cacher-ng dependencies
+- name: installing apt-cacher-ng dependencies...
   become: yes
   become_user: root
-  package: name={{item}} state=present
   with_items:
     - apache2
-  
-- name: (Ubuntu) installing apt-cacher-ng
-  become: yes
-  become_user: root
-  package: name={{item}} state=present
-  with_items:
     - apt-cacher-ng
-
-- name: (Ubuntu) install apt-cacher-ng config
+  package:
+    name: '{{item}}'
+    state: present
+  
+- name: install apt-cacher-ng config
   become: yes
   become_user: root
-  register: apt_cacher_ng_config_written
-  template: >
-    src=etc/apt-cacher-ng/acng.conf.j2
-    dest=/etc/apt-cacher-ng/acng.conf
-    owner=root
-    group=root
-    mode=0644
-    
-- name: (Ubuntu) start apt-cacher-ng service
-  become: yes
-  become_user: root
-  service: name=apt-cacher-ng state=started enabled=true
-
-- name: (Ubuntu) restart apt-cacher-ng service
-  become: yes
-  become_user: root
-  when: apt_cacher_ng_config_written|changed
-  service: name=apt-cacher-ng state=restarted
+  with_items:
+    - f: acng.conf
+      d: /etc/apt-cacher-ng
+      m: '0644'
+  template:
+    src: '{{item.f}}.j2'
+    dest: '{{item.d}}/{{item.f}}'
+    mode: '{{item.m}}'
