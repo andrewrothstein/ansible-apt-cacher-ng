@@ -1,6 +1,6 @@
-[![CircleCI](https://circleci.com/gh/andrewrothstein/ansible-apt-cacher-ng.svg?style=svg)](https://circleci.com/gh/andrewrothstein/ansible-apt-cacher-ng)
 andrewrothstein.apt-cacher-ng
 =========
+[![Build Status](https://travis-ci.org/andrewrothstein/ansible-apt-cacher-ng.svg?branch=master)](https://travis-ci.org/andrewrothstein/ansible-apt-cacher-ng)
 
 Installs [apt-cacher-ng](https://www.unix-ag.uni-kl.de/~bloch/acng/)
 
