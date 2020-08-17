@@ -9,10 +9,10 @@ galaxy_info:
   platforms:
     - name: Ubuntu
       versions:
-        - trusty
+        - bionic
+        - focal
         - xenial
   galaxy_tags:
     - development
 
 dependencies: []
-  

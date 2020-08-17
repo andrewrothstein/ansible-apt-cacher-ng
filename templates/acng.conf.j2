@@ -13,11 +13,11 @@
 
 # Storage directory for downloaded data and related maintenance activity.
 #
-CacheDir: {{apt_cacher_ng_cachedir}}
+CacheDir: {{ apt_cacher_ng_cachedir }}
 
 # Log file directory, can be set empty to disable logging
 #
-LogDir: {{apt_cacher_ng_logdir}}
+LogDir: {{ apt_cacher_ng_logdir }}
 
 # A place to look for additional configuration and resource files if they are not
 # found in the configuration directory
@@ -27,7 +27,7 @@ LogDir: {{apt_cacher_ng_logdir}}
 # TCP server port for incoming http (or HTTP proxy) connections.
 # Can be set to 9999 to emulate apt-proxy.
 #
-Port:{{apt_cacher_ng_port}}
+Port:{{ apt_cacher_ng_port }}
 
 # Addresses or hostnames to listen on. Multiple addresses must be separated by
 # spaces. Each entry must be an exact local address which is associated with a

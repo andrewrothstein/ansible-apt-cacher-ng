@@ -2,13 +2,12 @@
 - name: installing apt-cacher-ng dependencies...
   become: yes
   become_user: root
-  with_items:
-    - apache2
-    - apt-cacher-ng
   package:
-    name: '{{item}}'
+    name:
+      - apache2
+      - apt-cacher-ng
     state: present
-  
+
 - name: install apt-cacher-ng config
   become: yes
   become_user: root
@@ -17,6 +16,6 @@
       d: /etc/apt-cacher-ng
       m: '0644'
   template:
-    src: '{{item.f}}.j2'
-    dest: '{{item.d}}/{{item.f}}'
-    mode: '{{item.m}}'
+    src: '{{ item.f }}.j2'
+    dest: '{{ item.d }}/{{ item.f }}'
+    mode: '{{ item.m }}'
