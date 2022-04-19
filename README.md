@@ -1,6 +1,6 @@
 andrewrothstein.apt-cacher-ng
 =========
-[![Build Status](https://travis-ci.org/andrewrothstein/ansible-apt-cacher-ng.svg?branch=master)](https://travis-ci.org/andrewrothstein/ansible-apt-cacher-ng)
+![Build Status](https://github.com/andrewrothstein/ansible-apt-cacher-ng/actions/workflows/build.yml/badge.svg)
 
 Installs [apt-cacher-ng](https://www.unix-ag.uni-kl.de/~bloch/acng/)
 
